@@ -18,21 +18,21 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   font-family: var(--font-family);
-
+  width: fit-content;
   display: flex;
-  justify-content: center;
-  align-items: start;
-  height: 100vh;
+  align-items: center;
+  min-height: 100vh;
   gap: 27px;
   padding: 56px 0;
+  margin: 0 auto;
 }
 
 aside {
   background-color: var(--itens-background);
   border-radius: 10px;
-  height: 100%;
-  padding: 40px 16px;
+  padding: 32px 16px;
   text-align: center;
+  margin: 0 0 0 auto;
 }
 
 .lista-links {
@@ -52,6 +52,7 @@ aside {
   text-decoration: none;
   color: var(--secondary-color);
   font-size: 22px;
+  padding: 10px 16px;
 }
 
 .lista-links li:first-of-type a {
@@ -64,17 +65,19 @@ aside {
   border-radius: 8px;
 }
 
-main {
+.index {
   background-color: var(--itens-background);
   border-radius: 10px;
   padding: 32px;
   display: flex;
+  flex-wrap: wrap;
   gap: 24px;
   height: 100%;
+  margin: 0 auto 0 0;
 }
 
 .container-upload-imagem {
-  flex: 40%;
+  flex: 40;
 }
 
 h2 {
@@ -186,8 +189,7 @@ textarea {
 }
 
 .container-descricao {
-  width: 436px;
-  flex: 60%;
+  flex: 60;
 }
 
 .main-imagem {
@@ -241,4 +243,79 @@ textarea {
   color: var(--secondary-color);
   font-size: 15px;
   width: 400px;
+}
+
+.about {
+  background-color: var(--itens-background);
+  border-radius: 10px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 50%;
+  margin: 0 auto 0 0;
+}
+
+.about p {
+  margin-bottom: 10px;
+  font-family: var(--font-family);
+}
+
+.about h3 {
+  margin-bottom: 20px;
+}
+
+.about h1{
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.about h1::before {
+  content: "";
+  background-image: url("./img/info.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  margin-right: 10px;
+}
+
+.about-container-image {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+  width: 100%;
+  height: auto;
+}
+
+.about-container-image img {
+  width: 400px;
+}
+
+.link-ativo {
+  background-color: #00090E;
+  border-radius: 8px;
+}  
+
+@media only screen and (max-width: 946px) {
+  body {
+    flex-direction: column;
+  }
+  aside {
+    flex-direction: row;
+    margin: auto;
+  }
+  .lista-links {
+    flex-direction: row;
+  }
+
+  .about {
+    margin: 0;
+    width: 95%;
+  }
+
 }
