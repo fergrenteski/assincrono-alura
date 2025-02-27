@@ -2,6 +2,7 @@
   --background-color: #00090E;
   --text-color: #E1E1E1;
   --primary-color: #81FE88;
+  --delete-color: #ff4d4d;
   --secondary-color: #888888;
   --tag-color: #171D1F;
   --font-family: "Prompt", sans-serif;
@@ -33,6 +34,7 @@ aside {
   padding: 32px 16px;
   text-align: center;
   margin: 0 0 0 auto;
+  height: 92vh;
 }
 
 .lista-links {
@@ -72,7 +74,8 @@ aside {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
-  height: 100%;
+  width: 800px;
+  height: 92vh;
   margin: 0 auto 0 0;
 }
 
@@ -124,10 +127,21 @@ textarea {
   gap: 10px;
   padding: 4px 8px;
   border-radius: 4px;
+  margin: 2px;
 }
 
 .lista-tags {
   display: flex;
+  flex-wrap: wrap;
+  max-width: 270px;
+}
+
+.remove-tag {
+  cursor: pointer;
+}
+
+.remove-tag:hover {
+  scale: 1.4;
 }
 
 .containter-botoes {
@@ -172,6 +186,14 @@ textarea {
   color: var(--itens-background);
   border: 1px solid var(--itens-background);
   position: relative;
+}
+
+.botao-publicar:hover{
+  scale: 0.95;
+}
+
+.botao-descartar:hover{
+  scale: 0.95;
 }
 
 .botao-publicar::after {
@@ -237,6 +259,10 @@ textarea {
   margin-left: 8px;
 }
 
+.container-upload-imagem button:hover{
+  scale: 0.95;
+}
+
 .container-imagem-nome {
   display: flex;
   gap: 8px;
@@ -252,7 +278,8 @@ textarea {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  width: 50%;
+  height: 92vh;
+  width: 800px;
   margin: 0 auto 0 0;
 }
 
@@ -287,7 +314,7 @@ textarea {
   text-align: center;
   display: flex;
   justify-content: center;
-  margin-top: 10%;
+  margin-top: 10px;
   width: 100%;
   height: auto;
 }
@@ -296,10 +323,111 @@ textarea {
   width: 400px;
 }
 
+.ativo {
+  background-color: var(--primary-color);
+  color: var(--background-color) !important;
+}
+
 .link-ativo {
   background-color: #00090E;
   border-radius: 8px;
 }  
+
+.feed {
+  background-color: var(--itens-background);
+  border-radius: 10px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 92vh;
+  width: 800px;
+  gap: 24px;
+  margin: 0 auto 0 0;
+}
+
+#feed-post-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  overflow: auto;
+}
+
+.feed-post {
+  display: flex;
+  height: 200px;
+  width: 100%;
+  gap: 50px;
+  position: relative;
+}
+
+.feed-imagem {
+  flex: 40%;
+}
+
+.botao-deletar {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+  background-color: var(--delete-color);
+  border: none;
+  color: var(--text-color);
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+
+.feed-imagem img{
+  background-color: var(--secondary-color);
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.feed span{
+  color: var(--secondary-color);
+  font-size: 32px;
+  text-align: center;
+  font-family: var(--font-family);
+}
+
+.feed-conteudo {
+  flex: 60%;
+}
+
+.feed ul{
+  list-style-type: none;
+}
+
+.feed-tags {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.feed-tags li{
+  background-color: var(--secondary-color);
+  color: var(--background-color);
+  gap: 10px;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin: 0 4px 0 0;
+}
+
+.feed-conteudo h3,.feed-conteudo p{
+  margin-top: 1rem;
+}
+
+.feed-conteudo p{
+  max-height: 100px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; 
+  -webkit-box-orient: vertical;
+}
 
 @media only screen and (max-width: 946px) {
   body {

@@ -22,7 +22,7 @@
                     <a href="./index.html" class="link-destaque">Publicar</a>
                 </li>
                 <li>
-                    <a href="./feed.html" id="feed">
+                    <a href="./feed.html" class="link-ativo" id="feed">
                         <img src="./img/feed.svg" alt="">
                         Feed
                     </a>
@@ -34,7 +34,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="./about.html" class="link-ativo">
+                    <a href="./about.html">
                         <img src="./img/info.svg" alt="">
                         Sobre Nós
                     </a>
@@ -49,33 +49,13 @@
         </nav>
     </aside>
 
-    <main class="about">
-        <h1>Sobre Nós</h1>
-    <div>
-      <h3>Code Connect: Conectando Desenvolvedores e Projetos</h3>
-      <p>
-        O <strong>Code Connect</strong> é um aplicativo web inovador que permite aos desenvolvedores compartilhar seus projetos em um
-        feed dinâmico e interativo. Com uma interface moderna e intuitiva, a plataforma possibilita a publicação de
-        projetos contendo imagens, descrições detalhadas e tags para facilitar a categorização e descoberta por outros
-        usuários.
-      </p>
-      <p>
-        Os usuários podem explorar o feed para encontrar projetos de interesse, interagir com publicações e expandir sua
-        rede dentro da comunidade de tecnologia. Além disso, o Code Connect oferece ferramentas para gerenciar o perfil
-        e acompanhar seus próprios projetos de maneira organizada.
-      </p>
-      <p>
-        Seja para exibir um novo design de interface, um sistema back-end robusto ou uma ideia inovadora, o Code Connect
-        é o espaço ideal para divulgar e descobrir criações no mundo do desenvolvimento. 🚀
-      </p>
-    </div>
-
-    <div class="about-container-image">
-      <img src="./img/Logo.svg" alt="">
-    </div>
+    <main class="feed">
+        <ul id="feed-post-lista">
+        </ul>
     </main>
 
     <script src="scripts.js"></script>
+    <script src="feed.js"></script>
 </body>
 
 </html>
